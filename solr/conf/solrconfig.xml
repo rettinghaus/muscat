@@ -57,6 +57,7 @@
        
               <lib dir="./lib" />
     -->
+  <lib dir="/Users/xhero/devel/solr_extensions/target" />
   <dataDir>${solr.data.dir:}</dataDir>
 
 
@@ -721,6 +722,26 @@
     </arr>
   </requestHandler>
   
+  <requestHandler name="/svg" class="solr.SearchHandler" startup="lazy">
+    <arr name="last-components">
+      <str>svgcomponent</str>
+    </arr>
+  </requestHandler>
+  
+  <queryParser name="themaxparser" class="org.rismch.ThemaxQParserPlugin" />
+  <searchComponent name="svgcomponent" class="org.rismch.SVGSearchComponent" />
+  
+  <searchComponent name="tvComponent" class="org.apache.solr.handler.component.TermVectorComponent"/>
+  <requestHandler name="/tvrh" class="org.apache.solr.handler.component.SearchHandler">
+          <lst name="defaults">
+                  <bool name="tv">true</bool>
+          </lst>
+          <arr name="last-components">
+                  <str>tvComponent</str>
+          </arr>
+  </requestHandler>
+  
   <!-- Admin Handlers - This will register all the standard admin RequestHandlers. -->
   <requestHandler name="/admin/" class="solr.admin.AdminHandlers" />
+    
 </config>
