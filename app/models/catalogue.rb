@@ -184,7 +184,7 @@ class Catalogue < ApplicationRecord
     self.index
   end
 
-  # @todo What is this?
+  # The configuration of solr 
   searchable :auto_index => false do |sunspot_dsl|
     sunspot_dsl.integer :id
     sunspot_dsl.text :id_text do

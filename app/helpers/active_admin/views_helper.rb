@@ -256,5 +256,4 @@ module ActiveAdmin::ViewsHelper
       model.where((modif_at + "> ?"), days.days.ago).limit(limit).order(modif_at + " DESC") 
     end
   end
-
 end

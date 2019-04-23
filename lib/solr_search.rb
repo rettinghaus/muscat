@@ -197,7 +197,7 @@ module Muscat
 					else
 						# if no field is specified
 						# return all elements
-						fields <<{:fields => [], :value => "*"}
+						fields << {:fields => [], :value => "*"}
 						# If ordering is not given
 						# order by id, default in sunspot is
 						# by :score
@@ -210,7 +210,6 @@ module Muscat
                   
 					return fields, order, with, page
 				end
-        
 			end
 		end
 	end

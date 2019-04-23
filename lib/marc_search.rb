@@ -30,12 +30,9 @@ class MarcSearch
       end
     end
     result
-
   end
 
   def self.fields(model)
     IndexConfig.get_fields(model)
   end
-
 end
-

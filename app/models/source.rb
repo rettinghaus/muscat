@@ -168,7 +168,7 @@ class Source < ApplicationRecord
     self.index
   end
 
-  # @todo What is this?
+  # The configuration for solr
   searchable :auto_index => false do |sunspot_dsl| 
     sunspot_dsl.integer :id 
     sunspot_dsl.integer :record_type 
@@ -488,7 +488,8 @@ class Source < ApplicationRecord
     nil
   end
 
-  # @todo What is this?
+  # Adds ransackers
+  # @see {https://github.com/activerecord-hackery/ransack/wiki/Using-Ransackers}
   ransacker :"852a_facet", proc{ |v| } do |parent| parent.table[:id] end
   ransacker :"593a_filter", proc{ |v| } do |parent| parent.table[:id] end
   ransacker :record_type_select, proc{ |v| } do |parent| parent.table[:id] end

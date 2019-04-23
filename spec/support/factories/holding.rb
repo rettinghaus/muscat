@@ -20,8 +20,4 @@ STRING
 STRING
     }
   end
-
-
-
-
 end

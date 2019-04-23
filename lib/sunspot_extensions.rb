@@ -39,5 +39,4 @@
         delegate :get_connection, :to => :session
       end
     end
-    
   end
