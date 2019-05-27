@@ -222,4 +222,6 @@ class Holding < ApplicationRecord
   def display_name
     "#{lib_siglum} [#{id}]"
   end
+
+  ransacker :"852a_facet", proc{ |v| } do |parent| parent.table[:id] end
 end

@@ -249,8 +249,7 @@ class Catalogue < ApplicationRecord
     "#{name}: #{infos}"
   end
 
-  # @todo Looks like this should return all the Entries
-  #   in the Marc-Field 760$0 but returned is a empty Array
+  # Return all the Entries in the Marc-Field 760$0
   def get_items
     MarcSearch.select(Catalogue, '760$0', id.to_s).to_a
   end

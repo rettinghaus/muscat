@@ -23,7 +23,10 @@ RSpec.describe Admin::HoldingsController, type: :controller, solr: true do
    it "should change the solr sources index result" do
       initial_size = Source.solr_search { with("lib_siglum_order", "D-B")  }.total
       FactoryBot.create(:edition)
+      Sunspot.index[Holding]
       Sunspot.index[Source]
+      Sunspot.index[Institution]
+      Source.reindex
       Sunspot.commit
       after_create_size = Source.solr_search { with("lib_siglum_order", "D-B")  }.total
       expect(after_create_size).to eq(initial_size + 1)

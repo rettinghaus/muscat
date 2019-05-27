@@ -73,6 +73,7 @@ module RISM
 	DEFAULT_NOREPLY_EMAIL = "sample@email.com"
 	# Default system name
 	DEFAULT_EMAIL_NAME = "Muscat"
+	RISM::DEFAULT_EMAIL_NAME = "sample@email.com"
 	
 	# Sent the validation notifications
 	SEND_VALIDATION_NOTIFICATIONS = false

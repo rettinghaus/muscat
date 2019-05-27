@@ -147,8 +147,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
 end
-
-gem 'yard'
-gem 'redcarpet'
-gem 'github-markup'
-gem 'sqlite3'
