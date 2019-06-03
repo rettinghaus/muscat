@@ -1744,6 +1744,7 @@ doc_record_status:
         fr: Section
         de: Abteilung
         en: Department
+		pt: Departamento
     c: 
       label: 
         it: Segnatura
