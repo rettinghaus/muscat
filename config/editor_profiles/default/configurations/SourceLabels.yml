@@ -1729,7 +1729,7 @@ doc_record_status:
     fr: "Sigle de bibliothèque"
     de: Bibliothekssigel
     en: Library siglum
-	pt: Sigla da instituição
+    pt: Sigla da instituição
   fields: 
     a: 
       label: 
@@ -1737,14 +1737,14 @@ doc_record_status:
         fr: "Sigle de bibliothèque"
         de: Bibliothekssigel
         en: Library siglum
-		pt: Sigla da instituição
+        pt: Sigla da instituição
     b: 
       label: 
         it: Dipartimento
         fr: Section
         de: Abteilung
         en: Department
-		pt: Departamento
+        pt: Departamento
     c: 
       label: 
         it: Segnatura
