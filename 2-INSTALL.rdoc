@@ -1,7 +1,6 @@
 = Installation instructions
 
-This document describes how to bootstrap into the webapplication. 
-The documentation is updated for Ubuntu 18.14 LTS.
+This document describes how to bootstrap into the webapplication. The documentation is updated for Ubuntu 18.14 LTS.
 
 == Requirements
 
@@ -20,10 +19,7 @@ The following other libraries and programs are needed
 
 == Ruby and Rails
 
-Muscat 5 now requires ruby 2.5 by default. 
-Rails is installed with the correct version with bundle. 
-Ubuntu comes with ruby 2.5 by default so no actions are necessary. 
-On older Debian systems the easyest way to get ruby 2.5 is via rbenv adding for all users.
+Muscat 4 now requires ruby 2.3 by default. Rails is installed with the correct version with bundle. Ubuntu comes with ruby 2.5 by default so no actions are necessary. On older Debian systems the easyest way to get ruby 2.3 is via rbenv adding for all users.
 
 On older Ubuntu systems add the following repositories
 
@@ -36,7 +32,7 @@ On Ubuntu 18.04 only passenger is needed:
  deb https://oss-binaries.phusionpassenger.com/apt/passenger bionic main
  
 (Add /etc/apt/sources.list or create a relevant file in /etc/apt/sources.list.d)
-Also make sure that universe repositories are enabled!
+Also make sure that unniverse repositories are enabled!
 
 On 18.40, also enable GPG verification of Passenger:
 
@@ -46,13 +42,13 @@ On 18.40, also enable GPG verification of Passenger:
 
 Then install all the dependencies and setup passenger:
 
- sudo apt-get update
- sudo apt-get install mysql-server apache2 git ruby ruby-dev gcc zlib1g-dev libxml2-dev imagemagick libmagickcore-6.q16-dev libmagickwand-6.q16-dev libmysqlclient-dev openjdk-8-jdk-headless passenger libapache2-mod-passenger
- sudo a2enmod passenger
+ apt-get update
+ apt-get install mysql-server apache2 git ruby ruby-dev gcc zlib1g-dev libxml2-dev imagemagick libmagickcore-6.q16-dev libmagickwand-6.q16-dev libmysqlclient-dev openjdk-8-jdk-headless
+ a2enmod passenger
  
 Passenger also wants to compile a binary module, this is optional but will enable it
 
- sudo mkdir /var/www/.passenger
+ mkdir /var/www/.passenger
  sudo chown -R www-data:www-data /var/www/.passenger
 
 == Bootstrap the application
@@ -61,8 +57,8 @@ Get the sources if necessary (https://github.com/rism-ch/muscat and https://gith
 
  git clone https://github.com/rism-ch/muscat.git --recursive
 
- sudo gem install bundler -v '< 2.0' ## force 1.7 until we get compatibile with 2.0
- sudo bundle install #--deployment # deployment is only for the production system
+ gem install bundler
+ bundle install #--deployment # deployment is only for the production system
 
 Install base configuration:
 
@@ -74,10 +70,6 @@ Install the base css:
 
  cd muscat/config
  cp muscat-custom-sample.scss ../vendor/assets/stylesheets/muscat-custom.scss
-
-Make sure the directory is owned by the right user (www-data on ubuntu)
-
-  sudo chown -R www-data:www-data muscat/
 
 Set up databases access:
 
@@ -107,7 +99,12 @@ Default (development) startup:
  
 Try to open http://$IP_ADDRESS:3000/
 
-For startup in production mode see "Starting Daemons in Production Mode"
+For startup in production mode (with sudo or as root):
+
+ bundle exec rake RAILS_ENV=production assets:precompile
+ bundle exec rake RAILS_ENV=production sunspot:solr:start
+ RAILS_ENV=production bundle exec crono start # Muscat periodic jobs
+ RAILS_ENV=production bin/delayed_job -n 4 restart # Background jobs, tune the n to your system
 
 For refreshing an installation in production mode (with sudo, as root or sudo -u www-data depending on the permissions on the installation dir):
 
@@ -151,32 +148,42 @@ With MySQL 64 bit binaries, add:
 
 Example Apache configuration:
 
- # create /usr/local/etc/apache22/Includes/default.conf
+ # create /usr/local/etc/apache/Includes/default.conf
  # and add default site:
  <VirtualHost *:80>
          # ServerName www..org
          DocumentRoot /var/rails/rism-ch/public
          <Directory "/var/rails/rism-ch/public">
-                 Options All -Indexes +ExecCGI -Includes +MultiViews
-                 AllowOverride All
-                 Order allow,deny
-                 Allow from all
+                 Options All -Indexes +ExecCGI -Includes +MultiViewsny
+                 Require all granted
          </Directory>
-         RailsEnv production
+         RailsEnv development
  </VirtualHost>
 
-Double check permissions in the muscat installation. Also make sure DocumentRoot and Directory point to public/ in the muscat installation location.
+Double check permissions:
 
-Start Apache, Solr and the related services in production mode (see below).
+ # Create /var/rails and populate with software
+ mkdir /var/rails
+ <command to checkout as needed TBD>
+ chown -R www /var/rails
 
-== Starting Daemons in Production Mode
+Start Apache and Solr.
+
+If all this works, you can access the rism application:
+
+ http://$IP_ADDRESS
+
+== Add clean up in crontab for blacklight
+
+ 0 2 * * * cd $PATH_TO && $PATH_TO/bin/rake blacklight:delete_old_searches[7] RAILS_ENV=production
+ 
+ == Starting Daemons
  
  Muscat has three running daemons that should be started:
  
   sudo RAILS_ENV=production bin/delayed_job start
   sudo RAILS_ENV=production bundle exec crono start
-  # Make sure solr is not running as root!
-  sudo -u www-data bundle exec rake RAILS_ENV=production sunspot:solr:start
+  sudo bundle exec rake RAILS_ENV=production sunspot:solr:start
   
 Depending on the env, remove sudo if necessary. RAILS_ENV is needed only on production, and has to come *after* sudo.
   
@@ -184,7 +191,4 @@ Also it is goot to block access to SOLR:
 
   sudo iptables -A INPUT -p tcp -s localhost --dport 8983 -j ACCEPT
   sudo iptables -A INPUT -p tcp --dport 8983 -j DROP
-
-== Add clean up in crontab for blacklight
-
- 0 2 * * * cd $PATH_TO && $PATH_TO/bin/rake blacklight:delete_old_searches[7] RAILS_ENV=production
+  
