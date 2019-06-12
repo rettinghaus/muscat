@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\config",
+    "\\config\\editor_profiles",
+    "\\config\\editor_profiles\\default",
+    "\\config\\editor_profiles\\default\\configurations",
     "\\config\\locales"
   ],
-  "SelectedNode": "\\config\\locales\\pt.yml",
+  "SelectedNode": "\\config\\editor_profiles\\default\\configurations\\SourceLabels.yml",
   "PreviewInSolutionExplorer": false
 }

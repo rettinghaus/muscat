@@ -167,11 +167,13 @@ doc_library:
     de: Besitzerangaben
     en: Library information
     it: Informazioni sulla biblioteca
+    pt: Informação da instituição
 doc_provenance: 
   label: 
     de: Provenienz
     en: Provenance
     it: Provenienza
+    pt: Proveniência
 doc_linkage: 
   label: 
     de: Verlinkung
@@ -569,6 +571,7 @@ doc_record_status:
     fr: No. local
     de: Lokale Nummer
     en: Local Number
+    pt: Número local
   fields: 
     a: 
       label: 
@@ -576,6 +579,7 @@ doc_record_status:
         fr: No. local
         de: Lokale Nummer
         en: Local ID no.
+        pt: Número local
       edit_label:
         en: ""
 "040": 
@@ -1103,6 +1107,7 @@ doc_record_status:
     fr: Autre cote
     de: Weitere Signatur
     en: Other shelfmark
+    pt: Outra(o) cota/código/número
   fields: 
     a: 
       label: 
@@ -1110,6 +1115,7 @@ doc_record_status:
         fr: Autre cote
         de: Weitere Signatur
         en: Other shelfmark
+        pt: Outra(o) cota/código/número
 "592": 
   label: 
     it: Filigrana
@@ -1549,6 +1555,7 @@ doc_record_status:
         fr: "Collectivité subordonnée"
         de: Untergeordnete Körperschaft
         en: Department
+        pt: Departamento
     g: 
       label: 
         it: Qualificazione d'attribuzione
@@ -1751,18 +1758,21 @@ doc_record_status:
         fr: Cote
         de: Signatur
         en: Shelfmark
+        pt: Cota/Código/Número
     d: 
       label: 
         it: Segnatura vecchia (olim)
         fr: Ancienne cote (olim)
         de: Alte Signatur (olim)
         en: Shelfmark (olim)
+        pt: Cota/Código/Número antigo(a) (olim)
     e: 
       label: 
         it: Biblioteca
         fr: "Bibliothèque"
         de: Bibliothek
         en: Library
+        pt: Instituição
     q: 
       label: 
         it: Materiale conservato
@@ -1775,12 +1785,14 @@ doc_record_status:
         fr: URI
         de: URI
         en: URI
+        pt: URI
     z: 
       label: 
         it: Nome del fondo
         fr: Fonds
         de: Bestandsname
         en: Provenance
+        pt: Proveniência
 "856": 
   label: 
     it: Localizzazione e accesso elettronico
@@ -1883,6 +1895,7 @@ show_library:
     fr: "Bibliothèque"
     de: Besitzerangaben
     en: Library information
+    pt: Informação da instituição
 show_links: 
   label: 
     it: Titoli connessi
@@ -1946,6 +1959,7 @@ edit_library:
     fr: "Bibliothèque et relations"
     de: Besitzerangaben und Verlinkung
     en: Library information and relations
+    pt: Informação da instituição e relações
 edit_material: 
   label: 
     it: Descrizione del materiale
