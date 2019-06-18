@@ -2353,24 +2353,32 @@ afr:
     FR: Afrikaans
     de: Afrikaans
     en: Afrikaans
+    pt: Africânder
+    es: Afrikáans
 ara: 
   label: 
     IT: Arabo
     FR: Arabe
     de: Arabisch
-    en: Arabic 
+    en: Arabic
+    pt: Árabe
+    es: Árabe
 arg: 
   label: 
     IT: Aragonese
     FR: Aragonais
     de: Aragonesisch
     en: Aragonese
+    pt: Aragonês
+    es: Aragonés
 baq: 
   label: 
     it: BASQUE
     fr: BASQUE
     de: Baskisch
     en: Basque
+    pt: Basco
+    es: Vasco
 cat: 
   label: 
     it: Catalano
