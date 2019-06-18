@@ -645,6 +645,8 @@ doc_record_status:
     fr: Compositeur/Auteur
     de: Komponist/Autor
     en: Composer/Author
+    pt: Compositor/Autor
+    es: Compositor/Nombre del Autor
   fields: 
     a: 
       label: 
@@ -652,23 +654,31 @@ doc_record_status:
         fr: Nom
         de: Name
         en: Name
+        pt: Nome
+        es: Nombre
     d: 
       label: 
         it: Data di nascita e di morte
         fr: Dates de vie
         de: Geburts- und Todesdaten
         en: Life dates
+        pt: Datas de nascimento e morte
+        es: Fechas de nacimiento y muerte
     j: 
       label: 
         it: Qualificazione d'attribuzione
         fr: Qualificatif d'attribution
         de: Zuschreibungsvermerk
         en: Attribution qualifier
+        pt: Atribuição
+        es: Atribución
       edit_label: 
         it: Attribuzione
         fr: Attribution
         de: Zuschreibung
         en: Attribution
+        pt: Atribuição
+        es: Atribución
 "240": 
   label: 
     it: Titolo uniforme
@@ -894,6 +904,7 @@ doc_record_status:
     fr: Restriction d'accès
     de: "Zugangsbeschränkungen"
     en: Access restrictions
+    pt: Restrições de acesso
   fields: 
     a: 
       label: 
@@ -901,6 +912,7 @@ doc_record_status:
         fr: Restriction d'accès
         de: "Zugangsbeschränkungen"
         en: Access restriction
+        pt: Restrições de acesso
       edit_label: 
         en: ""
 "508": 
@@ -988,6 +1000,7 @@ doc_record_status:
     fr: Source d'acquisition
     de: Unmittelbare Beschaffungsquelle
     en: Source of acquisition
+    pt: Origem da aquisição
   fields: 
     a: 
       label: 
@@ -995,24 +1008,28 @@ doc_record_status:
         fr: Source d'acquisition
         de: Beschaffungsquelle
         en: Source of acquisition note
+        pt: Nota de origem da aquisição
     c: 
       label: 
         it: Metodo d'acquisto
         fr: "Méthode d'acquisition"
         de: Beschaffungsart
         en: Method of acquisition
+        pt: Método de aquisição
     d: 
       label: 
         it: Data d'acquisto
         fr: Date d'acquisition
         de: Beschaffungsdatum
         en: Date of acquisition
+        pt: Data de aquisição
     e: 
       label: 
         it: Numero di acquisizione
         fr: Numéro d'acquisition
         de: Akzessionsnumer
         en: Accession number
+        pt: Número de aquisição
 "546": 
   label: 
     it: Nota sulla lingua
@@ -1034,6 +1051,7 @@ doc_record_status:
     fr: Provenance
     de: Provenienzvermerke
     en: Provenance note
+    pt: Nota de proveniência
   fields: 
     a: 
       label: 
@@ -1041,6 +1059,7 @@ doc_record_status:
         fr: Provenance
         de: Provenienzvermerke
         en: Provenance notes
+        pt: Nota de proveniência
       edit_label: 
         en: ""
 "563": 
@@ -1661,6 +1680,7 @@ doc_record_status:
     fr: Contenu de la source
     de: Untergeordnete Einträge
     en: Items in this source
+    pt: Itens nesta fonte
   fields: 
     w: 
       label: 
@@ -1676,6 +1696,7 @@ doc_record_status:
     fr: Source principale
     de: Übergeordneter Eintrag
     en: Parent record
+    pt: Registo/registro principal
   fields: 
     w: 
       label: 
@@ -1683,6 +1704,7 @@ doc_record_status:
         fr: Source principale
         de: Übergeordneter Eintrag
         en: Parent record
+        pt: Registo/registro principal
       edit_label: 
         en: ""
 "775": 
@@ -1691,6 +1713,7 @@ doc_record_status:
     fr: "Première entrée"
     de: Ersteintrag
     en: Initial entry
+    pt: Entrada inicial
   fields: 
     w: 
       label: 
@@ -1698,6 +1721,7 @@ doc_record_status:
         fr: "Première entrée"
         de: Ersteintrag
         en: Initial entry
+        pt: Entrada inicial
       edit_label: 
         en: ""
 "787": 
@@ -1706,6 +1730,7 @@ doc_record_status:
     fr: Insertions
     de: Einlagen
     en: Insertions
+    pt: Inserções
   fields: 
     w: 
       label: 
@@ -1713,24 +1738,28 @@ doc_record_status:
         fr: "Numéro RISM de la source"
         de: RISM Dokumentnummer des Hauptwerks
         en: RISM ID number
+        pt: Número ID RISM
     n: 
       label: 
         it: Collocazione dell'inserimento nell'opera principale
         fr: Remarque sur l'endroit de l'insertion
         de: Stelle der Einlage im Hauptwerk
         en: Location of insertion
+        pt: Localização da inserção
     g: 
       label: 
         it: Incipit num.
         fr: No. d'incipit
         de: Incipitnummer
         en: Incipit number
+        pt: Número de incipit
     s: 
       label: 
         it: Titolo uniforme
         fr: Titre uniforme
         de: Einordnungstitel des Hauptwerks
         en: Standardized title
+        pt: Título uniforme
 "852": 
   label: 
     it: Sigla della biblioteca
@@ -1980,6 +2009,7 @@ edit_names:
     fr: Personnes et institutions
     de: Personen und Körperschaften
     en: People and institutions
+    pt: Pessoas e instituições
 edit_references: 
   label: 
     it: Bibliografia e note
@@ -2280,36 +2310,42 @@ voc:
     fr: "Vérifié"
     de: Gesichert
     en: Verified
+    es: Verificado
 "Ascertained":
   label:
     it: Accertato
     fr: "Authentifié"
     de: Ermittelt
     en: Ascertained
+    es: Comprobado
 "Alleged":
   label:
     it: Presunto
     fr: "Présumé"
     de: Angeblich
     en: Alleged
+    es: Presumible
 "Doubtful":   
   label:
     it: Dubbio
     fr: "Douteux"
     de: Zweifelhaft
     en: Doubtful
+    es: Dudosa
 "Misattributed":   
   label:
     it: Attribuito erroneamente
     fr: "Erroné"
     de: Fälschlich
     en: Misattributed
+    es: Mal atribuida
 "Conjectural":   
   label:
     it: Congetturale
     fr: Conjectural
     de: Mutmaßlich
     en: Conjectural
+    es: Conjetural
 # Marc Language codes
 afr: 
   label: 
