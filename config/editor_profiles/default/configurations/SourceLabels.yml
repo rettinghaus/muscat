@@ -38,6 +38,7 @@ doc_abbr_keys:
     de: "Tonarten"
     en: "Keys"
     it: "Tasti"
+    es: Tonalidad
 doc_abbr_lang: 
   label: 
     de: "Sprachcodes"
@@ -534,12 +535,14 @@ doc_record_status:
         de: Tonart, Modus
         en: Key or mode
         pt: Tonalidade ou modo
+        es: Tonalidad o modo
       edit_label: 
         it: "Tonalità"
         fr: "Tonalité"
         de: Tonart
         en: Key
         pt: Tonalidade  
+        es: Tonalidad
     s: 
       label: 
         it: "Validità"
@@ -560,6 +563,7 @@ doc_record_status:
         de: Textincipit
         en: Text incipit
         pt: Incipit literário
+        es: Íncipit literario
     z: 
       label: 
         it: Organico del movimento
@@ -733,6 +737,7 @@ doc_record_status:
     de: Einordnungstitel
     en: Standardized title
     pt: Título uniforme
+    es: Titulo estandarizado
   fields: 
     k: 
       label: 
@@ -741,6 +746,7 @@ doc_record_status:
         de: Unterteilung nach der Form
         en: Subheading
         pt: Tipo especial de fonte
+        es: Subtítulos
     a: 
       label: 
         it: Titolo uniforme
@@ -748,6 +754,7 @@ doc_record_status:
         de: Einordnungstitel
         en: Standardized title
         pt: Título uniforme
+        es: Titulo estandarizado
     m: 
       label: 
         it: Organico sintetico
@@ -755,6 +762,7 @@ doc_record_status:
         de: Besetzungshinweis
         en: Scoring summary
         pt: Sintese da formação instrumental
+        es: Resumen de la partitura
     o: 
       label: 
         it: Arrangiamento
@@ -762,6 +770,7 @@ doc_record_status:
         de: Bearbeitung
         en: Arrangement statement
         pt: Menção de arranjo
+        es: Estado del arreglo
     p: 
       label: 
         it: Titolo della sezione o parte
@@ -774,6 +783,7 @@ doc_record_status:
         de: Tonart
         en: Key or mode
         pt: Tonalidade ou modo
+        es: Tonalidad o modo
 "245": 
   label: 
     it: Titolo diplomatico
@@ -781,6 +791,7 @@ doc_record_status:
     de: Diplomatischer Titel
     en: Title on source
     pt: Título na fonte
+    es: Titulo de la fuente
   fields: 
     a: 
       label: 
@@ -940,6 +951,7 @@ doc_record_status:
     de: Bemerkungen
     en: General note
     pt: Nota geral
+    es: Nota general
   fields: 
     a: 
       label: 
@@ -963,6 +975,7 @@ doc_record_status:
     de: Bemerkungen zu Inhaltsangaben
     en: Contents note
     pt: Nota de conteúdo
+    es: Nota de contenidos
   fields: 
     a: 
       label: 
@@ -1275,6 +1288,7 @@ doc_record_status:
     de: Besetzung
     en: Total scoring
     pt: Formação instrumental total
+    es: Orquestación completa
   fields: 
     b: 
       label: 
@@ -1283,6 +1297,7 @@ doc_record_status:
         de: Besetzung
         en: Voice/instrument
         pt: Voz/instrumento
+        es: Voz/Instrumento
         fields: 
     c: 
       label: 
@@ -1291,6 +1306,7 @@ doc_record_status:
         de: Anzahl
         en: Number
         pt: Número
+        es: Voz/Instrumento
 "595": 
   label: 
     it: "Ruoli: nomi  dei personaggi"
@@ -1546,6 +1562,7 @@ doc_record_status:
     de: Schlagworteintragung
     en: Subject heading
     pt: Cabeçalho de assunto
+    es: Título del encabezado
   fields: 
     a: 
       label: 
@@ -1738,6 +1755,7 @@ doc_record_status:
     de: Alternativer Titel
     en: Additional title
     pt: Título adicional
+    es: Titulo adicional
   fields: 
     a: 
       label: 
@@ -1746,6 +1764,7 @@ doc_record_status:
         de: Alternativer Titel
         en: Additional title
         pt: Título adicional
+        es: Titulo adicional
     g: 
       label: 
         it: Regole di cat.
@@ -1788,6 +1807,7 @@ doc_record_status:
         de: Tonart
         en: Key
         pt: Tonalidade
+        es: Tonalidad
 "740": 
   label: 
     it: Testo
@@ -1803,6 +1823,7 @@ doc_record_status:
         de: Text
         en: Text
         pt: Incipit literário
+        es: Íncipit literario
     n: 
       label: 
         it: Atto o sezione, intestazione
@@ -2987,18 +3008,21 @@ Excerpts:
     fr: Extraits
     de: Ausschnitte
     en: Excerpts
+    es: Extracto
 Sketches:
   label:
     it: Schizzi
     fr: Esquisses
     de: Skizzen
     en: Sketches
+    es: Bosquejo
 Fragments:
   label:
     it: Frammenti
     fr: Fragments
     de: Fragmente
     en: Fragments
+    es: Fragmentos
 Inserts:
   label:
     it: Inserimenti
@@ -4035,6 +4059,7 @@ li_650:
     it: "Parola chiave"
     de: "Schlagworteintragung"
     pt: Cabeçalho de assunto
+    es: Título del encabezado
 li_651:
   label:
     en: "Related place"
@@ -4056,6 +4081,7 @@ li_500:
     it: "Nota generale"
     de: "Allgemeine Bemerkungen"
     pt: Nota geral
+    es: Nota general 
 li_599:
   label:
     en: "Local note field"
@@ -4154,6 +4180,7 @@ aid_keys:
     en: "Keys"
     it: "Tonalità"
     de: "Tonarten"
+    es: Tonalidad
 aid_language:
   label:
     en: "Language codes"
