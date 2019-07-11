@@ -1,7 +1,7 @@
-# Marc is a toplevel MARC element, corresponding to what is found in the
-# <tt>source</tt> field of a Source. In encapsulates a root MarcNode which in
-# turn has as children all the subsequent nodes is the Marc record.
-# TODO: Add String.intern to convert all tags to symbols
+# Provides the toplevel MARC element, corresponding to what is found in the
+# <tt>source</tt> field of a Source. It encapsulates a root {#MarcNode} which in
+# turn has as children all the subsequent nodes in the Marc record.
+# @todo: Add String.intern to convert all tags to symbols
 
 class Marc
   include ApplicationHelper
@@ -25,7 +25,12 @@ class Marc
   public
   
   DOLLAR_STRING = "_DOLLAR_"
-  
+
+  # Creates a new instance
+  #
+  # @param model [String] the model that should be created,
+  #   one out of Source, Person or Institution
+  # @return [Marc] the new instance
   def initialize(model, source = nil, user = nil)
     @root = MarcNode.new(model)
     @marc21 = Regexp.new('^[\=]([\d]{3,3})[\s]+(.*)$')
@@ -40,27 +45,36 @@ class Marc
   end
   
   # Returns the root MarcNode
+  # @return [MarcNode]
   def __get_root
     @root
   end
   
+  # Suppresse scaffold links
+  # @return [Boolean]
   def suppress_scaffold_links
     self.suppress_scaffold_links_trigger = true
     @root.suppress_scaffold_links
   end  
   
-  # Returns a copy of this object an all of its references
+  # Returns a copy of this object and all of its references
+  # @return [Marc]
   def deep_copy
     Marshal.load(Marshal.dump(self))
   end
 
-  # After a Marc file is loaded an parsed, read all the foreign references
-  # and link them. In case they do not exist they will be created (upon saving the manuscript). 
+  # After a Marc file is loaded and parsed, reads all the foreign references
+  # and links them. In case they do not exist they will be created (upon saving the manuscript). 
+  # @param reindex [Boolean] Switch for the indexer
+  # @param user [String] 
+  # @return [Hash]
   def import(reindex = false, user = nil)
     @all_foreign_associations = @root.import(false, reindex, user)
   end
   
   # Creates a Marc object from the <tt>source</tt> field in the Source record
+  # @param resolve [Boolean]
+  # @return [Array]
   def load_source( resolve = true )
     @source.each_line { |line| ingest_raw(line.sub(/[\s\r\n]+$/, '')) } if @source
     @loaded = true
@@ -69,17 +83,20 @@ class Marc
     @root.resolve_externals unless !resolve
   end
   
+  # @return [Boolean]
   def loaded
     return @loaded
   end
   
   # Read a line from a MARC record
+  # @param tag_line [String]
   def ingest_raw(tag_line)
     if tag_line =~ @marc21
       parse_marc21 $1, $2
     end
   end
   
+  # @todo
   def to_internal
     # Drop leader
     by_tags("000").each {|t| t.destroy_yourself}
@@ -89,7 +106,7 @@ class Marc
     by_tags("005").each {|t| t.destroy_yourself}
     by_tags("008").each {|t| t.destroy_yourself}
   end
-  # TODO arguments should use parameters or keywords
+  # @todo arguments should use parameters or keywords
   def to_external(updated_at = nil, versions = nil, holdings = false)
     # cataloguing agency
     _003_tag = first_occurance("003")
@@ -110,9 +127,11 @@ class Marc
     by_tags("599").each {|t| t.destroy_yourself}
   end
   
-  # Parse a MARC 21 line
+  # Parses a MARC 21 line
+  # @param tag [Integer] tag number
+  # @param data [String] a tag line (MarcXML)
   def parse_marc21(tag, data)
-    # Warning! we are skipping the tag that are not included in MarcConfig
+    # Warning! we are skipping the tags that are not included in MarcConfig
     # It would probably be wise to notify the user 
     if !@marc_configuration.has_tag? tag
       @results << "Tag #{tag} missing in the marc configuration"
@@ -155,6 +174,9 @@ class Marc
   # This function by default uses marc_node.import to
   # create the relations with the foreign object and create
   # them in the DB. It will also call a reindex on them
+  # @param hash [Hash] Marcdata as hash
+  # @param user [Integer] user ID
+  # @param resolve [Boolean]
   def load_from_hash(hash, user = nil, resolve = true)
     @root << MarcNode.new(@model, "000", hash['leader'], nil) if hash['leader']
     
@@ -204,6 +226,8 @@ class Marc
   end
   
   # Load marc data from an array (use for loading diff versions)
+  # @see #load_from_hash
+  # param array_of_tags [Array] Array of tags
   def load_from_array(array_of_tags)
     @root = MarcNode.new(@model)
     array_of_tags.each do |t|
@@ -212,14 +236,19 @@ class Marc
     @loaded = true
   end
 
+  # Returns the Model
+  # @return [String]
   def get_model
     return @model.to_s
   end
   
+  # Returns the Configuration
+  # @return [MarcConfig] Marc Configuration
   def config
     return @marc_configuration
   end
 
+  # @todo document
 	def superimpose_template(template_name = "default.marc")
 		load_source unless @loaded
 		
@@ -235,7 +264,10 @@ class Marc
 		end
 	end
 
-  # Get all the foreign fields for this Marc object. Foreign fields are the one referred by ext_id ($0) in the marc record
+  # Gets all the foreign fields for this Marc object. 
+  # Foreign fields are the ones referred to by ext_id ($0) in the Marc Record
+  # @return [MarcNode]
+  # @todo test whether this is correct!
   def get_all_foreign_associations
     if @all_foreign_associations.empty?
       for child in @root.children
@@ -250,12 +282,15 @@ class Marc
     @all_foreign_associations
   end
 
+  # Gets all foreign Classes
+  # @return [Array<String>] Model Names
   def get_all_foreign_classes
     @marc_configuration.get_all_foreign_classes
   end
 
   # Test if the root element starts with =xxx where xxx are digits
   # Also check (and correct) zero padding for fields and subfield with zero-padding requirement (e.g., IDs)
+  # @return [Boolean]
   def is_valid?(pad = true)
     load_source unless @loaded
     begin
@@ -393,22 +428,29 @@ class Marc
     values.uniq.sort
   end
   
+  # Returns Marc as Yaml
+  # @return [String] Data
   def to_yaml
     load_source unless @loaded
     @root.to_yaml
   end   
 
+  # Returns MarcXML
+  # @return [String] Data
   def to_marc
     load_source unless @loaded
     @root.to_marc
   end
   
   # Export as a valid MARC record
+  # @return [String] Data
   def export
     load_source unless @loaded
     @root.to_marc :true    
   end
  
+  # Returns Marc as Json
+  # @return [Hash] Data
   def to_json
     load_source unless @loaded
     marc_json = {"leader" => "01471cjm a2200349 a 4500", "fields" => []}
@@ -419,6 +461,8 @@ class Marc
     return marc_json
   end
 
+  # Retruns MarcXML
+  # @return [String] MarcXML
   def to_xml(updated_at = nil, versions = nil, holdings = true)
     out = Array.new
     out << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
@@ -429,22 +473,19 @@ class Marc
     return out.join('')
   end
   
+  # Returns Marc Record
+  # @return [String]
   def to_xml_record(updated_at, versions, holdings)
     load_source unless @loaded
-    
     safe_marc = self.deep_copy
     safe_marc.root = @root.deep_copy
     safe_marc.to_external(updated_at, versions, holdings)
-    
     out = String.new
-    
     out += "\t<marc:record>\n"
     for child in safe_marc.root.children
       out += child.to_xml
     end
-
     out += "\t</marc:record>\n"
-    
     return out
   end
 
@@ -474,6 +515,7 @@ class Marc
   end
 
   # Return all tags
+  # @return [Array]
   def all_tags( resolve = true )
     load_source( resolve ) unless @loaded
     tags = Array.new
@@ -483,7 +525,9 @@ class Marc
     return tags
   end
   
-  # Return all the tags with a given name
+  # Returns all the tags with a given name
+  # @param tag_names [Array<String>] Tag Names
+  # @return [Array] Tags
   def by_tags(tag_names)
     load_source unless @loaded
     tags = Array.new
@@ -493,7 +537,8 @@ class Marc
     return tags
   end
   
-  # Return an ordered list of the given tags
+  # Returns an ordered list of the given tags
+  # @see #by_tags
   def by_tags_with_order(tag_names)
     load_source unless @loaded
     tags = Array.new
@@ -503,7 +548,8 @@ class Marc
     return tags
   end
 
-  
+  # Returns an iteralbe list of all the tags
+  # @return [Array]
   def each_data_tags_present( no_control = true )
     load_source unless @loaded
     seen = Hash.new
@@ -515,6 +561,9 @@ class Marc
     seen.keys.sort.each { |tag| yield tag }
   end
 
+  # Returns an iterable list of all the tags with the given name
+  # @param tag [String] Tag Name
+  # @return [Array]
   def each_data_tag_from_tag(tag)
     load_source unless @loaded
 
@@ -525,6 +574,9 @@ class Marc
     end
   end
 
+  # Returns subfield matching a given reference
+  # @param subfield_reference [String] Subfield Referece
+  # @return [Nil]
   def subfield(subfield_reference)
     load_source unless @loaded
     if subfield_reference.match /([\d]{3,3})([\w]{1,1})/
@@ -812,6 +864,7 @@ class Marc
   end
   
   # Get the birth date from MARC 100$d
+  # @return [Integer] Date of Birth
   def marc_helper_get_birthdate(value)
     if value.include?('-')
       field = value.split('-')[0]
@@ -823,6 +876,7 @@ class Marc
   end
 
   # Get the death date from MARC 100$d
+  # @return [Integer] Date of Death
   def marc_helper_get_deathdate(value)
     if value.include?('-')
       field = value.split('-')[1]

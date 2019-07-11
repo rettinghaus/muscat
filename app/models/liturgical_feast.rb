@@ -1,12 +1,10 @@
-# Describes any kind of liturgical feast (e.g. Adventus) linked wit a Source
+# Describes any kind of liturgical feast (e.g. Adventus) linked with a {#Source}
+# The class provides the same functionality as similar models, see {#Catalogue}
 #
-# === Fields
-# * <tt>name</tt> - Name of this particular feast
-# * <tt>notes</tt>
-# * <tt>src_count</tt> - The number of sources that reference this lib.
-#
-# the other standard wf_* fields are not shown.
-# The class provides the same functionality as similar models, see Catalogue
+# @field <tt>name</tt> - Name of this particular feast
+# @field <tt>notes</tt>
+# @field <tt>src_count</tt> - The number of sources that reference this lib.
+# @field the other standard wf_* fields are not shown.
 
 class LiturgicalFeast < ApplicationRecord
   include AuthorityMerge
@@ -18,20 +16,14 @@ class LiturgicalFeast < ApplicationRecord
   belongs_to :user, :foreign_key => "wf_owner"
     
   validates_presence_of :name
-  
   validates_uniqueness_of :name
   
   #include NewIds
-  
   before_destroy :check_dependencies
-  
   #before_create :generate_new_id
   after_save :reindex
-  
   attr_accessor :suppress_reindex_trigger
-
   alias_attribute :id_for_fulltext, :id 
-
   enum wf_stage: [ :inprogress, :published, :deleted, :deprecated ]
   enum wf_audit: [ :basic, :minimal, :full ]
   
@@ -40,11 +32,13 @@ class LiturgicalFeast < ApplicationRecord
     self.suppress_reindex_trigger = true
   end
   
+  # Reindexes the Record
   def reindex
     return if self.suppress_reindex_trigger == true
     self.index
   end
 
+  # @todo What is this?
   searchable :auto_index => false do
     integer :id
     text :id_text do
@@ -54,27 +48,24 @@ class LiturgicalFeast < ApplicationRecord
       name
     end
     text :name
-  
     text :notes
     text :alternate_terms
     string :alternate_terms_order do
       alternate_terms
     end
-		
     string :wf_stage
     join(:folder_id, :target => FolderItem, :type => :integer, 
               :join => { :from => :item_id, :to => :id })
-    
     integer :src_count_order, :stored => true do 
       LiturgicalFeast.count_by_sql("select count(*) from sources_to_liturgical_feasts where liturgical_feast_id = #{self[:id]}")
     end
   end
 
+  # Checks for foreign field relations to other Records
   def check_dependencies
     if (self.referring_sources.count > 0)
       errors.add :base, "The liturgical fease could not be deleted because it is used"
       throw :abort
     end
   end
-  
 end

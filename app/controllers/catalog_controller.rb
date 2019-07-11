@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
-#
+# Controlls the Catalogue-View
+
 class CatalogController < ApplicationController  
 
   include BlacklightRangeLimit::ControllerOverride
@@ -9,7 +10,7 @@ class CatalogController < ApplicationController
   DEFAULT_FACET_LIMIT = 20
   
   before_action :redirect_legacy_values, :only => :show
-  
+
   def facet_list_limit
   	if defined? @default_limit
       @default_limit
@@ -84,7 +85,6 @@ class CatalogController < ApplicationController
     @default_limit = DEFAULT_FACET_LIMIT
   end
 
-  
   def render_search_results_as_json_disable
     out = []
     @document_list.each do |item|
@@ -450,5 +450,4 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
-
 end 
