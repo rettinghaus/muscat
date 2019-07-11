@@ -20,7 +20,5 @@ help.sh
 system
 /doc
 .yardoc/
-db/schema.rb
-*/Gemfile.lock
 public/help/default
 playground/
