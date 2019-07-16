@@ -370,7 +370,7 @@ class MarcSource < Marc
 
     base_leader = "00000nXX#a2200000#u#4500"
 
-    if ((@record_type == RECORD_TYPES[:collection]) || (@record_type == RECORD_TYPES[:edition]))
+    if ((@record_type == RECORD_TYPES[:collection]) || (@record_type == RECORD_TYPES[:edition]) || (@record_type == RECORD_TYPES[:composite_volume]) )
       type = "cc"
       
       each_by_tag("774") do |t|

@@ -30,9 +30,10 @@
 					link_id = link.fetch_first_by_tag("w")
 					link_type = link.fetch_first_by_tag("4")
 					next if !link_id || !link_id.content
-					holding_link = true if link_type && link_type.content && link_type.content == "holding"
-					if holding_link
-						holding = @item.get_collection_holding(link_id.content.to_i)
+					holding_link = true if link_type && link_type.content && link_type.content =~ /holding/
+          if holding_link
+            holding_id = link_type.content.split(" ").last
+            holding = @item.get_collection_holding(holding_id.to_i)
 						child = holding.source if holding && holding.source
 					else
 						child = @item.get_child_source(link_id.content.to_i)
@@ -51,7 +52,7 @@
 								<% end %>
 								<%= " #{child.composer}" if child.composer != "" %><%= ": " if (child.composer != "" && child.std_title != "") %><i><%= "#{child.std_title}" if child.std_title != "" %></i>
 								<% if holding_link%>
-								 [Through holding <%= link_id.content%>]
+                  [Through holding <%= holding.marc.description rescue "WITHOUT HOLDING ID"%>]
 								<%end%>
 							</td>
 						</tr>

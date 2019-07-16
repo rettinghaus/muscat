@@ -153,7 +153,7 @@ class Holding < ApplicationRecord
       parent_manuscript.marc.each_data_tag_from_tag("774") do |tag|
         subfield = tag.fetch_first_by_tag("w")
         next if !subfield || !subfield.content
-        if subfield.content.to_i == id
+        if subfield.content.to_i == source_id
           puts "Deleting 774 $w#{subfield.content} for #{@old_collection}, from #{id}"
           tag.destroy_yourself
           modified = true
@@ -194,9 +194,9 @@ class Holding < ApplicationRecord
       # nothing found, add it in the parent manuscript
       mc = MarcConfigCache.get_configuration("source")
       w774 = MarcNode.new(@model, "774", "", mc.get_default_indicator("774"))
-      w774.add_at(MarcNode.new(@model, "w", id.to_s, nil), 0 )
-      w774.add_at(MarcNode.new(@model, "4", "holding", nil), 0 )
-      
+      w774.add_at(MarcNode.new(@model, "w", source_id.to_s, nil), 0 )
+      w774.add_at(MarcNode.new(@model, "4", "holding #{self.id}", nil), 0 )
+      w774.sort_alphabetically      
       parent_manuscript.marc.root.add_at(w774, parent_manuscript.marc.get_insert_position("774") )
 
       parent_manuscript.suppress_update_77x
