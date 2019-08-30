@@ -678,18 +678,21 @@ doc_record_status:
         fr: Traduction
         de: "Übersetzung"
         en: Translation
+        pt: Tradução
     1#: 
       label: 
         it: "Sì"
         fr: Oui
         de: Ja
         en: "Yes"
+        pt: Sim
     0#: 
       label: 
         it: "No"
         fr: Non
         de: Nein
         en: "No"
+        pt: Não
 "100": 
   label: 
     it: Compositore/Autore
@@ -814,6 +817,7 @@ doc_record_status:
         fr: Variante du titre diplomatique
         de: Weiterer diplomatischer Titel
         en: Variant title on manuscript
+        pt: Variante de título na fonte
       edit_label: 
         en: ""
 "260": 
@@ -1978,6 +1982,7 @@ doc_record_status:
         fr: Matériaux préservées
         de: Erhaltenes Material
         en: Material held
+        pt: Material existente
     u: 
       label: 
         it: URI
@@ -2222,6 +2227,7 @@ arr:
     fr: Arrangeur
     de: Bearbeiter
     en: Arranger
+    pt: Arranjador
 art: 
   label: 
     it: Scenografo
@@ -2234,12 +2240,14 @@ asn:
     fr: Autre nom
     de: Weiterer Name
     en: Associated name
+    pt: Nome associado
 aut: 
   label: 
     it: Autore
     fr: Auteur
     de: Autor
     en: Author
+    pt: Autor
 bnd: 
   label: 
     it: Rilegatore
@@ -2252,12 +2260,14 @@ bsl:
     fr: Libraire
     de: "Musikalienhändler"
     en: Bookseller
+    pt: Livreiro
 ccp: 
   label: 
     it: Autore della fonte letteraria
     fr: Auteur du texte
     de: Autor der Textvorlage
     en: Conceptor
+    pt: Conceptor
 chr: 
   label: 
     it: Coreografo
@@ -2276,6 +2286,7 @@ cmp:
     fr: Compositeur / Co-compositeur
     de: Komponistenquerverweis
     en: Composer cross-reference
+    pt: Referência cruzada de compositor
 cnd: 
   label: 
     it: Direttore d'orchestra
@@ -2288,6 +2299,7 @@ cns:
     fr: Censeur
     de: Zensor
     en: Censor
+    pt: Censor
 com: 
   label: 
     it: Compilatore
@@ -2306,12 +2318,14 @@ ctb:
     fr: Contributeur
     de: Mitkomponist
     en: Co-composer
+    pt: Co-compositor
 ccp:
   label:
     it: Ideatore
     fr: Concepteur
     de: Autor der Textvorlage
     en: Conceptor
+    pt: Conceptor
 dnc: 
   label: 
     it: Ballerino
@@ -2330,6 +2344,7 @@ dpt:
     fr: Dépositeur
     de: Depositor
     en: Depositor
+    pt: Depositante
 dsr: 
   label: 
     it: Progettista
@@ -2342,12 +2357,14 @@ dte:
     fr: "Dédicataire"
     de: "Widmungsträger"
     en: Dedicatee
+    pt: Dedicatário(a)
 dst: 
   label: 
     it: Distributore
     fr: "Distributeur"
     de: "Vertrieb"
     en: Distributor
+    pt: Distribuidor
 dub: 
   label: 
     it: Dubbio
@@ -2360,30 +2377,35 @@ edt:
     fr: Editeur
     de: Herausgeber
     en: Editor
+    pt: Editor
 egr: 
   label: 
     it: Incisore
     fr: Graveur
     de: Stecher
     en: Engraver
+    pt: Gravador
 evp:
   label: 
     it: "Luogo dell’evento"
     fr: "Lieu de l'événement"
     de: Veranstaltungsort
     en: Event place
+    pt: Local do evento
 fmo: 
   label: 
     it: Proprietario precedente
     fr: "Propriétaire précédent"
     de: Vorbesitzer
     en: Former owner
+    pt: Proprietário anterior
 ill: 
   label: 
     it: Disegnatore
     fr: Illustrateur
     de: Illustrator
     en: Illustrator
+    pt: Ilustrador
 itr: 
   label: 
     it: Strumentista
@@ -2396,24 +2418,28 @@ lbt:
     fr: Librettiste
     de: Librettist
     en: Librettist
+    pt: Libretista
 ltg: 
   label: 
     it: Litografo
     fr: Litographe
     de: Lithograph
     en: Lithographer
+    pt: Litógrafo
 lyr: 
   label: 
     it: Poeta
     fr: Parolier
     de: Textdichter
     en: Text author
+    pt: Autor literário
 oth: 
   label: 
     it: Altra funzione
     fr: Autre function
     de: Sonstige Funktion
     en: Other
+    pt: Outro
 otm: 
   label: 
     it: Organizzatore
@@ -2431,7 +2457,8 @@ pbl:
     it: Editore
     fr: Editeur
     de: Verleger
-    en: Publisher   
+    en: Publisher 
+    pt: Publicador
 ppm: 
   label: 
     it: Fabbricante di carta
@@ -2450,30 +2477,35 @@ prf:
     fr: "Interprète"
     de: Interpret
     en: Performer
+    pt: Intérprete
 prt: 
   label: 
     it: Stampatore
     fr: Imprimeur
     de: Drucker
     en: Printer
+    pt: Impressor
 pub: 
   label: 
     it: Editore
     fr: Editeur
     de: Verleger
     en: Publisher
+    pt: Publicador
 scr: 
   label: 
     it: Copista
     fr: Copiste / Scribe
     de: Schreiber
     en: Copyist
+    pt: Copista
 trl: 
   label: 
     it: Traduttore
     fr: Traducteur
     de: "Übersetzer"
     en: Translator
+    pt: Tradutor
 voc: 
   label: 
     it: Cantante
@@ -2488,6 +2520,7 @@ voc:
     de: Gesichert
     en: Verified
     es: Verificado
+    pt: Verificada
 "Ascertained":
   label:
     it: Accertato
@@ -2495,6 +2528,7 @@ voc:
     de: Ermittelt
     en: Ascertained
     es: Comprobado
+    pt: Certificada
 "Alleged":
   label:
     it: Presunto
@@ -2502,6 +2536,7 @@ voc:
     de: Angeblich
     en: Alleged
     es: Presumible
+    pt: Suposta
 "Doubtful":   
   label:
     it: Dubbio
@@ -2509,6 +2544,7 @@ voc:
     de: Zweifelhaft
     en: Doubtful
     es: Dudosa
+    pt: Duvidosa
 "Misattributed":   
   label:
     it: Attribuito erroneamente
@@ -2516,6 +2552,7 @@ voc:
     de: Fälschlich
     en: Misattributed
     es: Mal atribuida
+    pt: Equivocada
 "Conjectural":   
   label:
     it: Congetturale
@@ -2523,6 +2560,7 @@ voc:
     de: Mutmaßlich
     en: Conjectural
     es: Conjetural
+    pt: Conjetural
 # Marc Language codes
 afr: 
   label: 
@@ -3009,6 +3047,7 @@ Excerpts:
     de: Ausschnitte
     en: Excerpts
     es: Extracto
+    pt: Excertos
 Sketches:
   label:
     it: Schizzi
@@ -3016,6 +3055,7 @@ Sketches:
     de: Skizzen
     en: Sketches
     es: Bosquejo
+    pt: Esboços
 Fragments:
   label:
     it: Frammenti
@@ -3023,6 +3063,7 @@ Fragments:
     de: Fragmente
     en: Fragments
     es: Fragmentos
+    pt: Fragmentos
 Inserts:
   label:
     it: Inserimenti
@@ -3036,6 +3077,7 @@ Arr:
     fr: Arrangement
     de: Bearbeitung
     en: Arrangement
+    pt: Arranjo
 Var:
   label:
     it: Variazioni
@@ -3049,96 +3091,112 @@ A:
     fr: "La majeur"
     de: "A-Dur"
     en: "A major"
+    pt: Lá maior
 a:
   label:
     it: "La minore"
     fr: "La mineur"
     de: "a-Moll"
     en: "A minor"
+    pt: Lá menor
 A|x: 
   label:
     it: "La♯ maggiore"
     fr: "La♯ majeur"
     de: "Ais-Dur"
     en: "A♯ major"
+    pt: Lá sustenido menor
 a|x: 
   label:
     it: "La♯ minore"
     fr: "La♯ mineur"
     de: "ais-Moll"
     en: "A♯ minor"
+    pt: Lá bemol maior
 A|b: 
   label:
     it: "La♭ maggiore"
     fr: "La♭ majeur"
     de: "As-Dur"
     en: "A♭ major"
+    pt: Lá bemol maior
 a|b: 
   label:
     it: "La♭ minore"
     fr: "La♭ mineur"
     de: "as-Moll"
     en: "A♭ minor"
+    pt: Lá bemol menor
 B:
   label:
     it: "Si maggiore"
     fr: "Si majeur"
     de: "H-Dur"
     en: "B major"
+    pt: Si maior
 b:
   label:
     it: "Si minore"
     fr: "Si mineur"
     de: "h-Moll"
     en: "B minor"
+    pt: Si menor
 B|b: 
   label:
     it: "Si♭ maggiore"
     fr: "Si♭ majeur"
     de: "B-Dur"
     en: "B♭ major"
+    pt: Si bemol maior
 b|b: 
   label:
     it: "Si♭ minore"
     fr: "Si♭ mineur"
     de: "b-Moll"
     en: "B♭ minor"
+    pt: Si bemol menor
 C:
   label:
     it: "Do maggiore"
     fr: "Do majeur"
     de: "C-Dur"
     en: "C major"
+    pt: Dó maior
 c:
   label:
     it: "Do minore"
     fr: "Do mineur"
     de: "c-Moll"
     en: "C minor"
+    pt: Dó menor
 C|x: 
   label:
     it: "Do♯ maggiore"
     fr: "Do♯ majeur"
     de: "Cis-Dur"
     en: "C♯ major"
+    pt: Dó sustenido maior
 c|x: 
   label:
     it: "Do♯ minore"
     fr: "Do♯ mineur"
     de: "cis-Moll"
     en: "C♯ minor"
+    p: Dó sustenido menor
 C|b: 
   label:
     it: "Do♭ maggiore"
     fr: "Do♭ majeur"
     de: "Ces-Dur"
     en: "C♭ major"
+    pt: Dó bemol maior
 c|b: 
   label:
     it: "Do♭ minore"
     fr: "Do♭ mineur"
     de: "ces-Moll"
     en: "C♭ minor"
+    pt: Dó bemol menor
 D:
   label:
     it: "Re maggiore"
