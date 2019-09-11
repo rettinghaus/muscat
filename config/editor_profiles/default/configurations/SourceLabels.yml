@@ -3130,6 +3130,7 @@ zxx:
     fr: Sans contenu linguistique
     de: ohne Sprache
     en: No linguistic content
+    pt: "Sem conteúdo linguístico"
 #Subheading 240k / 730k
 Excerpts:
   label:
@@ -3888,6 +3889,7 @@ level:
     fr: "CATALOGING LEVEL"
     de: "Erfassungstiefe"
     en: "Cataloging level"
+    pt: "Nível de catalogação"
 autopsie:
   label:
     it: "MATERIAL EXAMINED"
@@ -3907,42 +3909,49 @@ retro:
     fr: "RETROSPECTIVE CONVERSION"
     de: "Retroeinspielung"
     en: "Retrospective conversion"
+    pt: "Conversão restropectiva"
 import:
   label:
     it: "IMPORT"
     fr: "IMPORT"
     de: "Fremddateneinspielung"
     en: "Import"
+    pt: "Importação"
 full:
   label:
     it: "FULL"
     fr: "FULL"
     de: "Vollkatalogisat"
     en: "Full"
+    pt: "Completo"
 standard:
   label:
     it: "STANDARD"
     fr: "STANDARD"
     de: "Standard"
     en: "Standard"
+    pt: "Normalizado"
 brief:
   label:
     it: "BRIEF"
     fr: "BRIEF"
     de: "Kurzkatalogisat"
     en: "Brief"
+    pt: "Breve"
 examined:
   label:
     it: "MATERIAL EXAMINED"
     fr: "MATERIAL EXAMINED"
     de: "Autopsie"
     en: "Material examined"
+    pt: Material examinado
 not_examined:
   label:
     it: "MATERIAL NOT EXAMINED"
     fr: "MATERIAL NOT EXAMINED"
     de: "Keine Autopsie"
     en: "Material not examined"
+    pt: "Material não examinado"
 
 
 
@@ -4104,21 +4113,25 @@ doc_in_identity:
     en: "Identity area"
     it: "Identità"
     de: "IDENTITY AREA"
+    pt: "Identidade"
 doc_in_contact:
   label:
     en: "Contact area"
     it: "Contatto"
     de: "Kontakt"
+    pt: "Contacto/Contato"
 doc_in_description:
   label:
     en: "Description area"
     it: "Descrizione"
     de: "Beschreibung"
+    pt: "Descrição"
 doc_in_control:
   label:
     en: "Control fields"
     it: "Campi di controllo"
     de: "Kontrollfelder"
+    pt: "Campos de controle"
 
 pe_100:
   label:
@@ -4252,6 +4265,7 @@ pe_control:
     en: "Control fields"
     it: "Campi di controllo"
     de: "Kontrollfelder"
+    pt: Campos de controle
 doc_places:
   label:
     en: "Places"
@@ -4427,16 +4441,19 @@ li_subject:
     en: "Subject access fields"
     it: "Campi delle parole chiave"
     de: "SUBJECT ACCESS FIELDS"
+    pt: "Campos de acesso por assunto"
 li_note:
   label:
     en: "Note fields"
     it: "Campi note"
     de: "Bemerkungsfelder"
+    pt: Campos de notas
 li_control:
   label:
     en: "Control fields"
     it: "Campi di controllo"
     de: "Kontrollfelder"
+    pt: Campos de controle
 li_lit:
   label:
     en: "Secondary literature"
@@ -4454,11 +4471,13 @@ aid_terms:
     en: "Standard music terms"
     it: "Terminologia musicale standard"
     de: "STANDARD MUSIC TERMS"
+    pt: "Termos musicais normalizados"
 aid_watermarks:
   label:
     en: "Standard watermarks"
     it: "Descrizione standard di filigrane"
     de: "Wasserzeichen"
+    pt: "Marcas de água/Marcas d'água normalizadas"
 
 aid_general:
   label:
@@ -4496,6 +4515,7 @@ doc_other:
     en: "Other help"
     it: "Altri aiuti"
     de: "Weitere Hilfen"
+    pt: "Outra ajuda"
 aid_titles:
   label:
     en: "Standardized titles - Subject headings"
@@ -4525,22 +4545,25 @@ aid_transpose:
     en: "Help for transposing instruments"
     it: "Tabella degli strumenti traspositori"
     de: "Hilfe zu transponierenden Instrumenten"
+    pt: "Ajuda para instrumentos transpositores"
 aid_opera:
   label:
     en: "Opera houses and concert halls"
     it: "Teatri e sale da concerto"
     de: "Opernhäuser und Konzerthallen"
+    pt: "Teatros de ópera e salas de concerto"
 aid_faq:
   label:
     en: "Frequently asked questions"
     it: "Domande frequenti"
     de: "FAQ"
-    pt: FAQ
+    pt: "Questões frequentes"
 aid_tt:
   label:
     en: "How do I ... Tips & Tricks"
     it: "Come faccio ... Suggerimenti e trucchi"
     de: "Wie kann ich ... Tipps & Tricks"
+    pt: "Como faço ...dicas & truques"
 aid_best:
   label:
     en: "RISM best practices"
