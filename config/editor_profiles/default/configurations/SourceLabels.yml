@@ -200,6 +200,7 @@ doc_provenance:
     en: Provenance
     it: Provenienza
     pt: "Proveniência"
+    es: Procedencia
 doc_linkage: 
   label: 
     de: Verlinkung
@@ -216,6 +217,7 @@ doc_physical_description:
     en: Material description
     it: Descrizione del materiale
     pt: "Descrição de material"
+    es: "Descripción del material"
 doc_content: 
   label: 
     de: Inhalt
@@ -429,6 +431,7 @@ doc_record_status:
     de: Plattennummer
     en: Plate Number
     pt: "Número de chapa"
+    es: "Nº de plancha"
   fields: 
     a: 
       label: 
@@ -437,6 +440,7 @@ doc_record_status:
         de: Plattennummer
         en: Plate number
         pt: "Número de chapa"
+        es: "Nº de plancha"
     "8": 
       label: 
         it: Gruppo di materiale
@@ -444,6 +448,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "031": 
   label: 
     it: Incipit musicale
@@ -910,6 +915,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "300": 
   label: 
     it: Materiale
@@ -946,6 +952,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "340": 
   label: 
     it: Tecnica di produzione speciale
@@ -976,6 +983,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "383": 
   label: 
     it: Num. d'opera
@@ -1016,6 +1024,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "505": 
   label: 
     it: Nota di contenuto
@@ -1201,6 +1210,7 @@ doc_record_status:
     de: Provenienzvermerke
     en: Provenance note
     pt: "Nota de proveniência"
+    es: Nota de procedencia
   fields: 
     a: 
       label: 
@@ -1209,6 +1219,7 @@ doc_record_status:
         de: Provenienzvermerke
         en: Provenance notes
         pt: "Nota de proveniência"
+        es: Nota de procedencia
       edit_label: 
         en: ""
 "563": 
@@ -1218,6 +1229,7 @@ doc_record_status:
     de: Einband
     en: Binding note
     pt: "Nota de encadernação"
+    es: "Encuadernación"
   fields: 
     a: 
       label: 
@@ -1226,6 +1238,7 @@ doc_record_status:
         de: Einband
         en: Binding note
         pt: "Nota de encadernação"
+        es: "Encuadernación"
     u: 
       label: 
         it: "UNUSED - WILL BE REMOVED"
@@ -1279,6 +1292,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "591": 
   label: 
     it: Altra segnatura
@@ -1301,6 +1315,7 @@ doc_record_status:
     de: Wasserzeichen
     en: Watermark description
     pt: "Descrição de marca de água"
+    es: Marcas de agua
   fields: 
     a: 
       label: 
@@ -1309,6 +1324,7 @@ doc_record_status:
         de: Wasserzeichen
         en: Watermark description
         pt: "Descrição de marca de água"
+        es: Marcas de agua
     "8": 
       label: 
         it: Gruppo di materiale
@@ -1316,6 +1332,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "593": 
   label: 
     it: Categoria di fonte
@@ -1323,6 +1340,7 @@ doc_record_status:
     de: Quellentyp
     en: Source type
     pt: Tipo de fonte
+    es: Tipo de fuente
   fields: 
     a: 
       label: 
@@ -1338,6 +1356,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "594": 
   label: 
     it: Organico
@@ -1647,7 +1666,7 @@ doc_record_status:
     de: Schlagworteintragung
     en: Subject heading
     pt: "Cabeçalho de assunto"
-    es: "Título del encabezado"
+    es: "Forma musical"
   fields: 
     a: 
       label: 
@@ -1656,7 +1675,7 @@ doc_record_status:
         fr: Sujet
         en: Subject heading
         pt: "Cabeçalho de assunto"
-        es: "Título del encabezado"
+        es: "Forma musical"
       edit_label: 
         en: ""
 "651": 
@@ -1683,6 +1702,7 @@ doc_record_status:
     de: Liturgische Feste
     en: Liturgical festival
     pt: "Festa litúrgica"
+    es: "Festividad litúrgica"
   fields: 
     a: 
       label: 
@@ -1691,6 +1711,7 @@ doc_record_status:
         de: Liturgische Feste
         en: Liturgical feasts
         pt: "Festa litúrgica"
+        es: "Festividad litúrgica"
       edit_label: 
         en: ""
 "690": 
@@ -1786,6 +1807,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "710": 
   label: 
     it: Nome di ente
@@ -1836,6 +1858,7 @@ doc_record_status:
         de: Set
         en: Set
         pt: Set
+        es: Set
 "730": 
   label: 
     it: Titolo uniforme alternativo
@@ -1967,6 +1990,7 @@ doc_record_status:
     de: Ersteintrag
     en: Initial entry
     pt: Entrada inicial
+    es: Ficha inicial
   fields: 
     w: 
       label: 
@@ -1975,6 +1999,7 @@ doc_record_status:
         de: Ersteintrag
         en: Initial entry
         pt: Entrada inicial
+        es: Ficha inicial
       edit_label: 
         en: ""
 "787": 
@@ -1992,6 +2017,7 @@ doc_record_status:
         de: RISM Dokumentnummer des Hauptwerks
         en: RISM ID number
         pt: "Número ID RISM"
+        es: "Nº identificador del RISM"
     n: 
       label: 
         it: Collocazione dell'inserimento nell'opera principale
@@ -2120,6 +2146,7 @@ doc_record_status:
     de: Werktitel
     en: Work
     pt: Obra
+    es: Trabajo
   fields: 
     a: 
       label: 
@@ -2128,6 +2155,7 @@ doc_record_status:
         fr: Oeuvre
         en: Work
         pt: Obra
+        es: Trabajo
       edit_label: 
         en: ""
       comment: "NEW IN 2018; experimental stage"
@@ -2209,6 +2237,7 @@ show_material:
     de: Materialbeschreibung
     en: Material description
     pt: "Descrição de material"
+    es: "Descripción del material"
 show_references: 
   label: 
     it: Bibliografia
@@ -2258,6 +2287,7 @@ edit_incipits:
     de: Incipits
     en: Incipits
     pt: Incipit
+    es: "Íncipits musicales"
 edit_library: 
   label: 
     it: Biblioteca e relazione
@@ -2272,6 +2302,7 @@ edit_material:
     de: Materialbeschreibung
     en: Material description
     pt: "Descrição de material"
+    es: "Descripción del material"
 
 edit_names: 
   label: 
@@ -2549,6 +2580,7 @@ pbl:
     de: Verleger
     en: Publisher 
     pt: Publicador
+    es: Editor
 ppm: 
   label: 
     it: Fabbricante di carta
@@ -2582,6 +2614,7 @@ pub:
     de: Verleger
     en: Publisher
     pt: Publicador
+    es: Editor
 scr: 
   label: 
     it: Copista
@@ -3171,6 +3204,7 @@ Arr:
     de: Bearbeitung
     en: Arrangement
     pt: Arranjo
+    es: Arreglo
 Var:
   label:
     it: Variazioni
@@ -3185,6 +3219,7 @@ A:
     de: "A-Dur"
     en: "A major"
     pt: "Lá  maior"
+    es: "La Mayor"
 a:
   label:
     it: "La minore"
@@ -3192,6 +3227,7 @@ a:
     de: "a-Moll"
     en: "A minor"
     pt: "Lá menor"
+    es: "La menor"
 A|x: 
   label:
     it: "La♯ maggiore"
@@ -3199,6 +3235,7 @@ A|x:
     de: "Ais-Dur"
     en: "A♯ major"
     pt: "Lá sustenido maior"
+    es: "La # Mayor"
 a|x: 
   label:
     it: "La♯ minore"
@@ -3206,6 +3243,7 @@ a|x:
     de: "ais-Moll"
     en: "A♯ minor"
     pt: "Lá sustenido menor"
+    es: "La # menor"
 A|b: 
   label:
     it: "La♭ maggiore"
@@ -3213,6 +3251,7 @@ A|b:
     de: "As-Dur"
     en: "A♭ major"
     pt: "Lá bemol maior"
+    es: "La b Mayor"
 a|b: 
   label:
     it: "La♭ minore"
@@ -3220,6 +3259,7 @@ a|b:
     de: "as-Moll"
     en: "A♭ minor"
     pt: "Lá bemol menor"
+    es: "La b menor"
 B:
   label:
     it: "Si maggiore"
@@ -3227,6 +3267,7 @@ B:
     de: "H-Dur"
     en: "B major"
     pt: Si maior
+    es: "Si Mayor"
 b:
   label:
     it: "Si minore"
@@ -3234,6 +3275,7 @@ b:
     de: "h-Moll"
     en: "B minor"
     pt: Si menor
+    es: "Si menor"
 B|b: 
   label:
     it: "Si♭ maggiore"
@@ -3241,6 +3283,7 @@ B|b:
     de: "B-Dur"
     en: "B♭ major"
     pt: Si bemol maior
+    es: "Si b Mayor"
 b|b: 
   label:
     it: "Si♭ minore"
@@ -3248,6 +3291,7 @@ b|b:
     de: "b-Moll"
     en: "B♭ minor"
     pt: Si bemol menor
+    es: "Si b menor"
 C:
   label:
     it: "Do maggiore"
@@ -3255,6 +3299,7 @@ C:
     de: "C-Dur"
     en: "C major"
     pt: "Dó maior"
+    es: "Do Mayor"
 c:
   label:
     it: "Do minore"
@@ -3262,6 +3307,7 @@ c:
     de: "c-Moll"
     en: "C minor"
     pt: "Dó menor"
+    es: "Do menor"
 C|x: 
   label:
     it: "Do♯ maggiore"
@@ -3269,6 +3315,7 @@ C|x:
     de: "Cis-Dur"
     en: "C♯ major"
     pt: "Dó sustenido maior"
+    es: "Do # Mayor"
 c|x: 
   label:
     it: "Do♯ minore"
@@ -3276,6 +3323,7 @@ c|x:
     de: "cis-Moll"
     en: "C♯ minor"
     pt: "Dó sustenido menor"
+    es: "Do # menor"
 C|b: 
   label:
     it: "Do♭ maggiore"
@@ -3283,6 +3331,7 @@ C|b:
     de: "Ces-Dur"
     en: "C♭ major"
     pt: "Dó bemol maior"
+    es: "Do b Mayor"
 c|b: 
   label:
     it: "Do♭ minore"
@@ -3290,13 +3339,15 @@ c|b:
     de: "ces-Moll"
     en: "C♭ minor"
     pt: "Dó bemol menor"
+    es: "Do b menor"
 D:
   label:
     it: "Re maggiore"
     fr: "Ré majeur"
     de: "D-Dur"
     en: "D major"
-    pt: "Ré maior"   
+    pt: "Ré maior"
+    es: "Re Mayor"
 d:
   label:
     it: "Re minore"
@@ -3304,6 +3355,7 @@ d:
     de: "d-Moll"
     en: "D minor"
     pt: "Ré menor"
+    es: "Re menor"
 D|x: 
   label:
     it: "Re♯ maggiore"
@@ -3311,6 +3363,7 @@ D|x:
     de: "Dis-Dur"
     en: "D♯ major"
     pt: "Ré sustenido maior"
+    es: "Re # Mayor"
 d|x: 
   label:
     it: "Re♯ minore"
@@ -3318,6 +3371,7 @@ d|x:
     de: "dis-Moll"
     en: "D♯ minor"
     pt: "Ré sustenido menor"
+    es: "Re # menor"
 D|b: 
   label:
     it: "Re♭ maggiore"
@@ -3325,6 +3379,7 @@ D|b:
     de: "Des-Dur"
     en: "D♭ major"
     pt: "Ré bemol maior"
+    es: "Re b Mayor"
 d|b: 
   label:
     it: "Re♭ minore"
@@ -3332,6 +3387,7 @@ d|b:
     de: "des-Moll"
     en: "D♭ minor"
     pt: "Ré bemol menor"
+    es: "Re b menor"
 E:
   label:
     it: "Mi maggiore"
@@ -3339,6 +3395,7 @@ E:
     de: "E-Dur"
     en: "E major"
     pt: "Mi maior"
+    es: "Mi Mayor"
 e:
   label:
     it: "Mi minore"
@@ -3346,6 +3403,7 @@ e:
     de: "e-Moll"
     en: "E minor"
     pt: "Mi menor"
+    es: "Mi menor"
 E|b: 
   label:
     it: "Mi♭ maggiore"
@@ -3353,13 +3411,15 @@ E|b:
     de: "Es-Dur"
     en: "E♭ major"
     pt: "Mi bemol maior"
+    es: "Mi b Mayor"
 e|b: 
   label:
     it: "Mi♭ minore"
     fr: "Mi♭ mineur"
     de: "es-Moll"
     en: "E♭ minor"
-    pt: pt: "Mi bemol menor"
+    pt: "Mi bemol menor"
+    es: "Mi b menor"
 F:
   label:
     it: "Fa maggiore"
@@ -3367,6 +3427,7 @@ F:
     de: "F-Dur"
     en: "F major"
     pt: "Fá maior"
+    es: "Fa Mayor"
 f:
   label:
     it: "Fa minore"
@@ -3374,6 +3435,7 @@ f:
     de: "f-Moll"
     en: "F minor"
     pt: "Fá menor"
+    es: "Fa menor"
 F|x: 
   label:
     it: "Fa♯ maggiore"
@@ -3381,6 +3443,7 @@ F|x:
     de: "Fis-Dur"
     en: "F♯ major"
     pt: "Fá sustenido maior"
+    es: "Fa # menor"
 f|x: 
   label:
     it: "Fa♯ minore"
@@ -3388,6 +3451,7 @@ f|x:
     de: "fis-Moll"
     en: "F♯ minor"
     pt: "Fá sustenido menor"
+    es: "Fa # Mayor"
 G:
   label:
     it: "Sol maggiore"
@@ -3395,6 +3459,7 @@ G:
     de: "G-Dur"
     en: "G major"
     pt: "Sol maior"
+    es: "Sol Mayor"
 g:
   label:
     it: "Sol minore"
@@ -3402,6 +3467,7 @@ g:
     de: "g-Moll"
     en: "G minor"
     pt: "Sol menor"
+    es: "Sol menor"
 G|x: 
   label:
     it: "Sol♯ maggiore"
@@ -3409,6 +3475,7 @@ G|x:
     de: "Gis-Dur"
     en: "G♯ major"
     pt: "Sol sustenido maior"
+    es: "Sol # menor"
 g|x: 
   label:
     it: "Sol♯ minore"
@@ -3416,6 +3483,7 @@ g|x:
     de: "gis-Moll"
     en: "G♯ minor"
     pt: "Sol sustenido menor"
+    es: "Sol # menor"
 G|b: 
   label:
     it: "Sol♭ maggiore"
@@ -3423,6 +3491,7 @@ G|b:
     de: "Ges-Dur"
     en: "G♭ major"
     pt: "Sol bemol maior"
+    es: "Sol b Mayor"
 g|b: 
   label:
     it: "Sol♭ minore"
@@ -3430,6 +3499,7 @@ g|b:
     de: "ges-Moll"
     en: "G♭ minor"
     pt: "Sol bemol menor"
+    es: "Sol b menor"
 # modes
 1t:
   label:
@@ -3438,6 +3508,7 @@ g|b:
     de: "Mode:  1t – Dorian"
     en: "Mode:  1t – Dorian"
     pt: "Modo:  1º tom (Dórico)"
+    es: "1º tono (dorio)"
 2t:
   label:
     it: "Mode:  2t – Hypodorian"
@@ -3445,6 +3516,7 @@ g|b:
     de: "Mode:  2t – Hypodorian"
     en: "Mode:  2t – Hypodorian"
     pt: "Modo:  odo:  2º tom (Hipodórico)"
+    es: "2º tono (hipodorio)"
 3t:
   label:
     it: "Mode:  3t – Phrygian"
@@ -3452,6 +3524,7 @@ g|b:
     de: "Mode:  3t – Phrygian"
     en: "Mode:  3t – Phrygian"
     pt: "Modo:  3º tom (Frígio)"
+    es: "3º tono (frigio)"
 4t:
   label:
     it: "Mode:  4t – Hypophrygian"
@@ -3459,6 +3532,7 @@ g|b:
     de: "Mode:  4t – Hypophrygian"
     en: "Mode:  4t – Hypophrygian"
     pt: "Modo:  4º tom (Hipofrígio)"
+    es: "4º tono (hipofrigio)"
 5t:
   label:
     it: "Mode:  5t – Lydian"
@@ -3466,6 +3540,7 @@ g|b:
     de: "Mode:  5t – Lydian"
     en: "Mode:  5t – Lydian"
     pt: "Modo:  5º tom (Lídio)"
+    es: "5º tono (lidio)"
 6t:
   label:
     it: "Mode:  6t – Hypolydian"
@@ -3473,6 +3548,7 @@ g|b:
     de: "Mode:  6t – Hypolydian"
     en: "Mode:  6t – Hypolydian"
     pt: "Modo:  6º tom (Hipolídio)"
+    es: "6º tono (hipolidio)"
 7t:
   label:
     it: "Mode:  7t – Mixolydian"
@@ -3480,6 +3556,7 @@ g|b:
     de: "Mode:  7t – Mixolydian"
     en: "Mode:  7t – Mixolydian"
     pt: "Modo:  7º tom (Mixolídio)"
+    es: "7º tono (mixolidio)"
 8t:
   label:
     it: "Mode:  8t – Hypomixolydian"
@@ -3487,6 +3564,7 @@ g|b:
     de: "Mode:  8t – Hypomixolydian"
     en: "Mode:  8t – Hypomixolydian"
     pt: "Modo:  8º tom (Hipomixolídio)"
+    es: "8º tono (hipomixolidio)"
 9t:
   label:
     it: "Mode:  9t – Aeolian"
@@ -3494,6 +3572,7 @@ g|b:
     de: "Mode:  9t – Aeolian"
     en: "Mode:  9t – Aeolian"
     pt: "Modo:  9º tom (Eólio)"
+    es: "9º tono (aeolio)"
 10t:
   label:
     it: "Mode: 10t – Hypoaeolian"
@@ -3501,6 +3580,7 @@ g|b:
     de: "Mode: 10t – Hypoaeolian"
     en: "Mode: 10t – Hypoaeolian"
     pt: "Modo:  10º tom (Hipoeólio)"
+    es: "10º tono (hipoaeolio)"
 11t:
   label:
     it: "Mode: 11t – Ionian"
@@ -3508,6 +3588,7 @@ g|b:
     de: "Mode: 11t – Ionian"
     en: "Mode: 11t – Ionian"
     pt: "Modo:  11º tom (Jônio)"
+    es: "11º tono (jonio)"
 12t:
   label:
     it: "Mode: 12t – Hypoionian"
@@ -3515,6 +3596,7 @@ g|b:
     de: "Mode: 12t – Hypoionian"
     en: "Mode: 12t – Hypoionian"
     pt: "Modo:  12º modo (Hipojônio)"
+    es: "12º tono (hipojonio)"
 1byz:
   label:
     it: "Octoechos 1: Ēchos prōtos (First mode of Byzantine music)"
@@ -4302,6 +4384,7 @@ li_300:
     it: "Descrizione fisica"
     de: "Materialbeschreibung"
     pt: "Descrição física"
+    es: "Descripción del material"
 li_337:
   label:
     en: "Media type"
@@ -4362,7 +4445,7 @@ li_650:
     it: "Parola chiave"
     de: "Schlagworteintragung"
     pt: "Cabeçalho de assunto"
-    es: "Título del encabezado"
+    es: "Forma musical"
 li_651:
   label:
     en: "Related place"
